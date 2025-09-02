@@ -1,8 +1,8 @@
 import express from 'express' // Importando o módulo express
-import profileRouter from './routes/profileRouter.js' // Importando o roteador de perfil
-import productRouter from './routes/productRouter.js' // Importando o roteador de produto
-import supplierRouter from './routes/supplierRouter.js' // Importando o roteador de fornecedor
-import carRouter from './routes/carRouter.js' // Importando o roteador de carro
+import profileRouter from './routers/profileRouter.js' // Corrigido: Importando o roteador de perfil
+import productRouter from './routers/productRouter.js' // Importando o roteador de produto
+import supplierRouter from './routers/supplierRouter.js' // Importando o roteador de fornecedor
+import carRouter from './routers/carRouter.js' // Importando o roteador de carro
 
 const app = express() // Criando uma instância do express
 const port = 3000 // Definindo a porta do servidor

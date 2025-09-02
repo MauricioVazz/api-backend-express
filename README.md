@@ -26,3 +26,15 @@ app.post('/produto', (req, res) => {
 - método criar ou inserir: post
 - Rota ou endereço: /produto
 - tipo de resposta: json
+
+## Comandos do Prisma
+
+- Instalação do Prisma
+- npm i prisma - D
+- npm i @prisma/client
+
+- Gerar o model do prisma a partir de um BD existente
+ - npx prisma db pull
+- Gerar o BD apatir de um model do prisma
+ -npx prisma db push
+- Gerar os arquivos necessários para usar o prisma cliente no código
