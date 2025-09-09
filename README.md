@@ -35,6 +35,9 @@ app.post('/produto', (req, res) => {
 
 - Gerar o model do prisma a partir de um BD existente
  - npx prisma db pull
+
 - Gerar o BD apatir de um model do prisma
  -npx prisma db push
+ 
 - Gerar os arquivos necessários para usar o prisma cliente no código
+ - npx prisma generate

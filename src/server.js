@@ -17,5 +17,5 @@ app.use('/supplier', supplierRouter) // Usando o roteador de fornecedor para rot
 app.use('/car', carRouter) // Usando o roteador de carro para rotas que começam com /car
 
 app.listen(port, () => {
-    console.log(`Example app listening on port http://localhost:${port}`)
+    console.log(`API Rodando em http://localhost:${port}`)
 })
