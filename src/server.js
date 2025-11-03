@@ -1,4 +1,5 @@
 import express from 'express' // Importando o módulo express
+import authRouter from './routers/authRouter.js' // Importando o roteador de autenticação
 import profileRouter from './routers/profileRouter.js' // Corrigido: Importando o roteador de perfil
 import productRouter from './routers/productRouter.js' // Importando o roteador de produto
 import supplierRouter from './routers/supplierRouter.js' // Importando o roteador de fornecedor
@@ -13,6 +14,7 @@ app.use(logger)
 app.use(cors()) // Habilitando CORS para todas as rotas
 app.use(express.json()) // Middleware para converter JSON em um objeto no req.body
 
+app.use('/auth', authRouter) // Usando o roteador de autenticação para rotas que começam com /auth
 app.use('/profile', profileRouter) // Usando o roteador de perfil para rotas que começam com /profile
 app.use('/product', productRouter) // Usando o roteador de produto para rotas que começam com /product
 app.use('/supplier', supplierRouter) // Usando o roteador de fornecedor para rotas que começam com /supplier
