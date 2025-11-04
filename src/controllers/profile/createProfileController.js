@@ -1,5 +1,5 @@
 import { create } from "../../models/profileModel.js"
-import bcrypt from 'bcryptjs'
+import bcrypt from 'bcrypt'
 
 export const createProfileController = async (req, res) => {
 
