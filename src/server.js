@@ -6,6 +6,8 @@ import supplierRouter from './routers/supplierRouter.js' // Importando o roteado
 import carRouter from './routers/carRouter.js' // Importando o roteador de carro
 import cors from 'cors'
 import { logger } from './middleware/logger.js'
+import { errorHandler } from './middleware/errorHandler.js'
+import { notFoundError } from './controllers/notFoundError.js'
 
 const app = express() // Criando uma instância do express
 const port = 3000 // Definindo a porta do servidor
@@ -19,6 +21,9 @@ app.use('/profile', profileRouter) // Usando o roteador de perfil para rotas que
 app.use('/product', productRouter) // Usando o roteador de produto para rotas que começam com /product
 app.use('/supplier', supplierRouter) // Usando o roteador de fornecedor para rotas que começam com /supplier
 app.use('/car', carRouter) // Usando o roteador de carro para rotas que começam com /car
+
+app.use(notFoundError) // Middleware para rotas não encontradas
+app.use(errorHandler) // Middleware de tratamento de erros
 
 app.listen(port, () => {
     console.log(`API Rodando em http://localhost:${port}`)
